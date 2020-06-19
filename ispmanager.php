@@ -1150,12 +1150,14 @@ class Ispmanager extends Module
     {
         try {
             $api = $this->getApi($hostname, $user_name, $password, $use_ssl);
-            $this->log(
-                $hostname . '|user',
-                serialize(['hostname' => $hostname, 'user_name' => $user_name, 'password' => $password, 'use_ssl' => $use_ssl]),
-                'input',
-                true
-            );
+
+            $params = compact('hostname', 'user_name', 'password', 'use_ssl');
+            $masked_params = $params;
+            $masked_params['user_name'] = '***';
+            $masked_params['password'] = '***';
+
+            $this->log($hostname . '|user', serialize($masked_params), 'input', true);
+
             $response = $api->getAccounts();
 
             $success = false;

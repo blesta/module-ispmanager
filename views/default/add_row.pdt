@@ -34,7 +34,7 @@
                     <li>
                         <?php
                         $this->Form->label($this->_('Ispmanager.row_meta.password', true), 'password');
-                        $this->Form->fieldText('password', $this->Html->ifSet($vars->password));
+                        $this->Form->fieldPassword('password');
                         ?>
                     </li>
                     <li>

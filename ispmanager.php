@@ -715,6 +715,7 @@ class Ispmanager extends Module
             // Update ISPmanager account
             $masked_params = $params;
             $masked_params['passwd'] = '***';
+            $masked_params['confirm'] = '***';
 
             // Edit account
             $params['elid'] = $service_fields->ispmanager_username;
@@ -1282,6 +1283,12 @@ class Ispmanager extends Module
         // Set internal error
         if (!$response) {
             $this->Input->setErrors(['api' => ['internal' => Language::_('Ispmanager.!error.api.internal', true)]]);
+            $success = false;
+        }
+
+        // Document error
+        if (isset($response->doc->error)) {
+            $this->Input->setErrors(['api' => ['doc' => $response->doc->error->msg]]);
             $success = false;
         }
 

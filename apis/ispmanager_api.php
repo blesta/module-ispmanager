@@ -130,7 +130,16 @@ class IspmanagerApi
                 }
             }
         }
-        
+
+        if (isset($response->doc->error)) {
+            foreach ($response->doc->error as $key => $element) {
+                if (!is_scalar($element) && isset($element->{'$'})) {
+                    $response->doc->error->{$key} = $element->{'$'};
+                    $response->error = (string) $element->{'$'};
+                }
+            }
+        }
+
         return $response;
     }
 

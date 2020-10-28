@@ -107,7 +107,7 @@ $lang['Ispmanager.!error.module_row.missing'] = 'An internal error occurred. The
 
 $lang['Ispmanager.!error.ispmanager_domain.format'] = 'Please enter a valid domain name, e.g. domain.com.';
 $lang['Ispmanager.!error.ispmanager_domain.test'] = "Domain name can not start with 'test'.";
-$lang['Ispmanager.!error.ispmanager_username.format'] = 'The username may contain only letters and numbers and may not start with a number.';
+$lang['Ispmanager.!error.ispmanager_username.format'] = 'The username may contain only letters and numbers.';
 $lang['Ispmanager.!error.ispmanager_username.test'] = "The username may not begin with 'test'.";
 $lang['Ispmanager.!error.ispmanager_username.length'] = 'The username must be between 1 and 16 characters in length.';
 $lang['Ispmanager.!error.ispmanager_password.valid'] = 'Password must be at least 8 characters in length.';

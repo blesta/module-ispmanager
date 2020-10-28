@@ -507,7 +507,7 @@ class Ispmanager extends Module
             'ispmanager_username' => [
                 'format' => [
                     'if_set' => true,
-                    'rule' => ['matches', '/^[a-z]([a-z0-9])*$/i'],
+                    'rule' => ['matches', '/^([a-z0-9])+$/i'],
                     'message' => Language::_('Ispmanager.!error.ispmanager_username.format', true)
                 ],
                 'length' => [

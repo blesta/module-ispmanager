@@ -17,9 +17,9 @@
                     <td><?php $this->Html->_($module_row->meta->host_name); ?></td>
                     <td>
                         <?php
-                            $this->Form->create($this->Html->safe('http' . ($module_row->meta->use_ssl == 'true' ? 's' : '') . '://' . $this->Html->ifSet($module_row->meta->host_name) . ':1500/ispmgr?func=logon'), ['target' => '_blank']);
-                            $this->Form->fieldHidden('username', $this->Html->ifSet($service_fields->ispmanager_username));
-                            $this->Form->fieldHidden('password', $this->Html->ifSet($service_fields->ispmanager_password));
+                            $this->Form->create($this->Html->safe('http' . ($module_row->meta->use_ssl == 'true' ? 's' : '') . '://' . (isset($module_row->meta->host_name) ? $module_row->meta->host_name : null) . ':1500/ispmgr?func=logon'), ['target' => '_blank']);
+                            $this->Form->fieldHidden('username', (isset($service_fields->ispmanager_username) ? $service_fields->ispmanager_username : null));
+                            $this->Form->fieldHidden('password', (isset($service_fields->ispmanager_password) ? $service_fields->ispmanager_password : null));
                             $this->Form->fieldHidden('lang', 'en');
                             $this->Form->fieldHidden('forget', 'on');
                             $this->Form->fieldHidden('func', 'auth');

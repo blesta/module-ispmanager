@@ -445,7 +445,7 @@ class Ispmanager extends Module
         $domain->attach(
             $fields->fieldText(
                 'ispmanager_domain',
-                $this->Html->ifSet($vars->ispmanager_domain, $this->Html->ifSet($vars->domain)),
+                (isset($vars->ispmanager_domain) ? $vars->ispmanager_domain : ($vars->domain ?? null)),
                 ['id' => 'ispmanager_domain']
             )
         );

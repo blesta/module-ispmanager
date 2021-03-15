@@ -108,7 +108,7 @@ class Ispmanager extends Module
             $fields->fieldSelect(
                 'meta[template]',
                 $templates,
-                $this->Html->ifSet($vars->meta['template']),
+                (isset($vars->meta['template']) ? $vars->meta['template'] : null),
                 ['id' => 'ispmanager_template']
             )
         );
@@ -378,7 +378,7 @@ class Ispmanager extends Module
         $domain->attach(
             $fields->fieldText(
                 'ispmanager_domain',
-                $this->Html->ifSet($vars->ispmanager_domain),
+                (isset($vars->ispmanager_domain) ? $vars->ispmanager_domain : null),
                 ['id' => 'ispmanager_domain']
             )
         );
@@ -394,7 +394,7 @@ class Ispmanager extends Module
         $username->attach(
             $fields->fieldText(
                 'ispmanager_username',
-                $this->Html->ifSet($vars->ispmanager_username),
+                (isset($vars->ispmanager_username) ? $vars->ispmanager_username : null),
                 ['id' => 'ispmanager_username']
             )
         );
@@ -413,7 +413,7 @@ class Ispmanager extends Module
         $password->attach(
             $fields->fieldPassword(
                 'ispmanager_password',
-                ['id' => 'ispmanager_password', 'value' => $this->Html->ifSet($vars->ispmanager_password)]
+                ['id' => 'ispmanager_password', 'value' => (isset($vars->ispmanager_password) ? $vars->ispmanager_password : null)]
             )
         );
         // Add tooltip
@@ -445,7 +445,7 @@ class Ispmanager extends Module
         $domain->attach(
             $fields->fieldText(
                 'ispmanager_domain',
-                $this->Html->ifSet($vars->ispmanager_domain, $this->Html->ifSet($vars->domain)),
+                (isset($vars->ispmanager_domain) ? $vars->ispmanager_domain : ($vars->domain ?? null)),
                 ['id' => 'ispmanager_domain']
             )
         );
@@ -478,7 +478,7 @@ class Ispmanager extends Module
         $password->attach(
             $fields->fieldPassword(
                 'ispmanager_password',
-                ['id' => 'ispmanager_password', 'value' => $this->Html->ifSet($vars->ispmanager_password)]
+                ['id' => 'ispmanager_password', 'value' => (isset($vars->ispmanager_password) ? $vars->ispmanager_password : null)]
             )
         );
         // Set the label as a field
@@ -1034,7 +1034,7 @@ class Ispmanager extends Module
                 && !empty($post['ispmanager_password'])
             ) {
                 $data = [
-                    'ispmanager_password' => $this->Html->ifSet($post['ispmanager_password'])
+                    'ispmanager_password' => (isset($post['ispmanager_password']) ? $post['ispmanager_password'] : null)
                 ];
                 $this->Services->edit($service->id, $data);
             } else {

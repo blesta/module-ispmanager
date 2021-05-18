@@ -1,6 +1,6 @@
 <?php
 /**
- * en_us language for the ispmanager module.
+ * fr_fr language for the ispmanager module.
  */
 // Basics
 $lang['Ispmanager.name'] = 'ISPmanager';

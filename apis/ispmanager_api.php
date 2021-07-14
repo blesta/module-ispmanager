@@ -1,4 +1,6 @@
 <?php
+use Blesta\Core\Util\Common\Traits\Container;
+
 /**
  * ISPmanager API.
  *
@@ -10,6 +12,9 @@
  */
 class IspmanagerApi
 {
+    // Load traits
+    use Container;
+
     /**
      * @var string The server hostname
      */
@@ -51,6 +56,10 @@ class IspmanagerApi
         $this->username = $username;
         $this->password = $password;
         $this->use_ssl = $use_ssl;
+
+        // Initialize logger
+        $logger = $this->getFromContainer('logger');
+        $this->logger = $logger;
     }
 
     /**
@@ -95,10 +104,20 @@ class IspmanagerApi
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
         curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+        if (Configure::get('Blesta.curl_verify_ssl')) {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, true);
+        } else {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        }
 
         $result = curl_exec($ch);
+
+        if ($result == false) {
+            $this->logger->error(curl_error($ch));
+        }
 
         curl_close($ch);
 

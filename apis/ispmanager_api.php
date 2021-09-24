@@ -107,7 +107,7 @@ class IspmanagerApi
 
         if (Configure::get('Blesta.curl_verify_ssl')) {
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         } else {
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
@@ -149,7 +149,7 @@ class IspmanagerApi
                 }
             }
         }
-        
+
         return $response;
     }
 
@@ -249,7 +249,7 @@ class IspmanagerApi
      * Updates the password for the given user.
      *
      * @param array $params An array containing the following arguments:
-     * 
+     *
      *  - elid: Username of the account to edit
      *  - passwd: The new password for the account
      * @return stdClass An object containing the request response

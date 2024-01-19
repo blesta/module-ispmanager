@@ -3,8 +3,8 @@
  * en_us language for the ispmanager module.
  */
 // Basics
-$lang['Ispmanager.name'] = 'ISPmanager';
-$lang['Ispmanager.description'] = 'ISPmanager provides rich feature set for managing websites, creating users, handling domains, emails, databases, etc.';
+$lang['Ispmanager.name'] = 'ispmanager';
+$lang['Ispmanager.description'] = 'ispmanager provides rich feature set for managing websites, creating users, handling domains, emails, databases, etc.';
 $lang['Ispmanager.module_row'] = 'Server';
 $lang['Ispmanager.module_row_plural'] = 'Servers';
 $lang['Ispmanager.module_group'] = 'Server Group';
@@ -36,7 +36,7 @@ $lang['Ispmanager.order_options.first'] = 'First Non-full Server';
 $lang['Ispmanager.order_options.roundrobin'] = 'Evenly Distribute Among Servers';
 
 // Add row
-$lang['Ispmanager.add_row.box_title'] = 'Add ISPmanager Server';
+$lang['Ispmanager.add_row.box_title'] = 'Add ispmanager Server';
 $lang['Ispmanager.add_row.basic_title'] = 'Basic Settings';
 $lang['Ispmanager.add_row.name_servers_title'] = 'Name Servers';
 $lang['Ispmanager.add_row.notes_title'] = 'Notes';
@@ -47,7 +47,7 @@ $lang['Ispmanager.add_row.name_server'] = 'Name server %1$s'; // %1$s is the nam
 $lang['Ispmanager.add_row.remove_name_server'] = 'Remove';
 $lang['Ispmanager.add_row.add_btn'] = 'Add Server';
 
-$lang['Ispmanager.edit_row.box_title'] = 'Edit ISPmanager Server';
+$lang['Ispmanager.edit_row.box_title'] = 'Edit ispmanager Server';
 $lang['Ispmanager.edit_row.basic_title'] = 'Basic Settings';
 $lang['Ispmanager.edit_row.name_servers_title'] = 'Name Servers';
 $lang['Ispmanager.edit_row.notes_title'] = 'Notes';
@@ -87,8 +87,8 @@ $lang['Ispmanager.service_info.options'] = 'Options';
 $lang['Ispmanager.service_info.option_login'] = 'Log in';
 
 // Tooltips
-$lang['Ispmanager.service_field.tooltip.domain_edit'] = 'This change will not affect ISPmanager, but only change the local record in Blesta.';
-$lang['Ispmanager.service_field.tooltip.username_edit'] = 'This change will not affect ISPmanager, but only change the local record in Blesta.';
+$lang['Ispmanager.service_field.tooltip.domain_edit'] = 'This change will not affect ispmanager, but only change the local record in Blesta.';
+$lang['Ispmanager.service_field.tooltip.username_edit'] = 'This change will not affect ispmanager, but only change the local record in Blesta.';
 $lang['Ispmanager.service_field.tooltip.username'] = 'You may leave the username blank to automatically generate one.';
 $lang['Ispmanager.service_field.tooltip.password'] = 'You may leave the password blank to automatically generate one.';
 

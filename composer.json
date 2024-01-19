@@ -1,6 +1,6 @@
 {
     "name": "blesta/ispmanager",
-    "description": "ISPmanager",
+    "description": "ispmanager",
     "license": "proprietary",
     "type": "blesta-module",
     "require": {

@@ -1,7 +1,7 @@
 <?php
 use Blesta\Core\Util\Validate\Server;
 /**
- * ISPmanager Module.
+ * ispmanager Module.
  *
  * @package blesta
  * @subpackage blesta.components.modules.ispmanager
@@ -712,7 +712,7 @@ class Ispmanager extends Module
 
         // Only update the service if 'use_module' is true
         if ($vars['use_module'] == 'true') {
-            // Update ISPmanager account
+            // Update ispmanager account
             $masked_params = $params;
             $masked_params['passwd'] = '***';
 
@@ -776,7 +776,7 @@ class Ispmanager extends Module
 
             $service_fields = $this->serviceFieldsToObject($service->fields);
 
-            // Suspend ISPmanager account
+            // Suspend ispmanager account
             $this->log(
                 $row->meta->host_name . '|user.suspend',
                 serialize($service_fields->ispmanager_username),
@@ -824,7 +824,7 @@ class Ispmanager extends Module
 
             $service_fields = $this->serviceFieldsToObject($service->fields);
 
-            // Unsuspend ISPmanager account
+            // Unsuspend ispmanager account
             $this->log(
                 $row->meta->host_name . '|user.suspend',
                 serialize($service_fields->ispmanager_username),
@@ -872,7 +872,7 @@ class Ispmanager extends Module
 
             $service_fields = $this->serviceFieldsToObject($service->fields);
 
-            // Delete ISPmanager account
+            // Delete ispmanager account
             $this->log(
                 $row->meta->host_name . '|user.delete',
                 serialize($service_fields->ispmanager_username),
@@ -1139,9 +1139,9 @@ class Ispmanager extends Module
      * Validates whether or not the connection details are valid by attempting to fetch
      * the number of accounts that currently reside on the server.
      *
-     * @param string $password The ISPmanager server password
-     * @param string $hostname The ISPmanager server hostname
-     * @param string $user_name The ISPmanager server user name
+     * @param string $password The ispmanager server password
+     * @param string $hostname The ispmanager server hostname
+     * @param string $user_name The ispmanager server user name
      * @param mixed $use_ssl Whether or not to use SSL
      * @param int $account_count The number of existing accounts on the server
      * @return bool True if the connection is valid, false otherwise
@@ -1305,9 +1305,9 @@ class Ispmanager extends Module
     /**
      * Initializes the IspmanagerApi and returns an instance of that object.
      *
-     * @param string $hostname The ISPmanager server hostname
-     * @param string $user_name The ISPmanager server user name
-     * @param string $password The ISPmanager server password
+     * @param string $hostname The ispmanager server hostname
+     * @param string $user_name The ispmanager server user name
+     * @param string $password The ispmanager server password
      * @param mixed $use_ssl Whether or not to use SSL
      * @return IspmanagerApi The IspmanagerApi instance
      */
@@ -1321,7 +1321,7 @@ class Ispmanager extends Module
     }
 
     /**
-     * Fetches a listing of all templates configured in ISPmanager for the given server
+     * Fetches a listing of all templates configured in ispmanager for the given server
      *
      * @param stdClass $module_row A stdClass object representing a single server
      * @return array An array of packages in key/value pair

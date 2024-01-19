@@ -1,8 +1,8 @@
-# ISPmanager
+# ispmanager
 
 [![Build Status](https://travis-ci.org/blesta/module-ispmanager.svg?branch=master)](https://travis-ci.org/blesta/module-ispmanager) [![Coverage Status](https://coveralls.io/repos/github/blesta/module-ispmanager/badge.svg?branch=master)](https://coveralls.io/github/blesta/module-ispmanager?branch=master)
 
-This is a module for Blesta that integrates with [ISPmanager](https://www.ispsystem.com/software/ispmanager).
+This is a module for Blesta that integrates with [ispmanager](https://www.ispsystem.com/software/ispmanager).
 
 ## Install the Module
 
@@ -24,7 +24,7 @@ your Blesta installation path.
 3. Log in to your admin Blesta account and navigate to
 > Settings > Modules
 
-4. Find the ISPmanager module and click the "Install" button to install it
+4. Find the ispmanager module and click the "Install" button to install it
 
 5. You're done!
 

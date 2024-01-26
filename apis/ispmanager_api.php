@@ -2,7 +2,7 @@
 use Blesta\Core\Util\Common\Traits\Container;
 
 /**
- * ISPmanager API.
+ * ispmanager API.
  *
  * @package blesta
  * @subpackage blesta.components.modules.ispmanager
@@ -21,12 +21,12 @@ class IspmanagerApi
     private $hostname;
 
     /**
-     * @var string The ISPmanager username
+     * @var string The ispmanager username
      */
     private $username;
 
     /**
-     * @var string The ISPmanager password
+     * @var string The ispmanager password
      */
     private $password;
 
@@ -43,7 +43,7 @@ class IspmanagerApi
     /**
      * Initializes the class.
      *
-     * @param mixed $hostname The ISPmanager hostname or IP Address
+     * @param mixed $hostname The ispmanager hostname or IP Address
      * @param mixed $username The user name
      * @param mixed $password The user password
      * @param mixed $use_ssl True to connect to the api using SSL
@@ -63,7 +63,7 @@ class IspmanagerApi
     }
 
     /**
-     * Send a request to the ISPmanager API.
+     * Send a request to the ispmanager API.
      *
      * @param string $function Specifies the api function to invoke
      * @param array $params The parameters to include in the api

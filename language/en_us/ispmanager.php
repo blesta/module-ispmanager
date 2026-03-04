@@ -10,6 +10,8 @@ $lang['Ispmanager.module_row_plural'] = 'Servers';
 $lang['Ispmanager.module_group'] = 'Server Group';
 $lang['Ispmanager.tab_client_actions'] = 'Actions';
 
+$lang['Ispmanager.back_to_manage'] = 'Back';
+
 // Module management
 $lang['Ispmanager.add_module_row'] = 'Add Server';
 $lang['Ispmanager.add_module_group'] = 'Add Server Group';

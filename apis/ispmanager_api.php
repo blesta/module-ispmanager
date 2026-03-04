@@ -1,4 +1,5 @@
 <?php
+
 use Blesta\Core\Util\Common\Traits\Container;
 
 /**
@@ -274,7 +275,7 @@ class IspmanagerApi
             return (object) ['error' => $request->error, 'response' => $request];
         }
 
-        return (object) ['response' => isset($request->doc->elem) ? $request->doc->elem : []];
+        return (object) ['response' => $request->doc->elem ?? []];
     }
 
     /**
@@ -290,7 +291,7 @@ class IspmanagerApi
             return (object) ['error' => $request->error, 'response' => $request];
         }
 
-        return (object) ['response' => isset($request->doc->elem) ? $request->doc->elem : []];
+        return (object) ['response' => $request->doc->elem ?? []];
     }
 
     /**

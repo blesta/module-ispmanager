@@ -42,6 +42,11 @@ class IspmanagerApi
     private $port;
 
     /**
+     * @var Blesta\Core\ServiceProviders\Logger Container logger
+     */
+    private $logger;
+
+    /**
      * Initializes the class.
      *
      * @param mixed $hostname The ispmanager hostname or IP Address

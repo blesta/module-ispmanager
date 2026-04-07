@@ -1186,7 +1186,7 @@ class Ispmanager extends Module
                 return true;
             }
         } catch (\Throwable $e) {
-            // Trap any errors encountered, could not validate connection
+            $this->log($hostname . '|user', serialize(['error' => $e->getMessage()]), 'output', false);
         }
 
         return false;
